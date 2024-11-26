@@ -1,0 +1,70 @@
+/* Hide custom print elements */
+.substack-printing-only {
+	display: none !important;
+}
+
+@media print {
+	/* Make all text smaller, more closer to a real newspaper font size*/
+	body {
+		font-size: 13px !important;
+	}
+
+	/* Make all hyperlinks black */
+	a {
+		color: black !important;
+	}
+
+	/* Show custom print elements */
+	.substack-printing-only {
+		display: block !important;
+	}
+
+	/* Newsletter title: increase size (normal size = around 24?) */
+	.post-header .navbar-title {
+		font-size: var(--font-size-36) !important;
+	}
+
+	/* Newsletter post title: decrease size (normal size = 32) */
+	.post-title {
+		font-size: var(--font-size-30) !important;
+	}
+
+	/* Post header: hide share buttons */
+	.subtitle + div > div:last-child {
+		display: none !important;
+	}
+
+	/* Post header: add border to author box */
+	.subtitle + div > div:first-child {
+		border-bottom: 1px solid var(--color-detail-themed) !important;
+	}
+
+	/* Post footer: hide comments */
+	#discussion {
+		display: none !important;
+	}
+
+	/* Post footer: hide likes & restack list */
+	.available-content + .visibility-check + div {
+		display: none !important;
+	}
+
+	/* Post footer: hide regular post footer */
+	.post-footer{
+		display: none !important;
+	}
+
+	/* Post footer: custom printable footer styling */
+	.print-post-footer {
+		font-style: italic;
+	}
+
+	/* Site footer: hide all */
+	.footer {
+		display: none !important;
+	}
+	/* Paywall overlay: hide */
+	.paywall {
+		display: none !important;
+	}
+}
