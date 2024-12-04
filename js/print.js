@@ -71,8 +71,7 @@ if (checkForPaywall()) {
 	console.warn('[Substack Printing Styles] Paywall detected! This article wouldn\'t print properly.');
 	// addPaywallNotice();
 }
-else {
-	createPrintPostFooter();
-	copyNewsletterTitleToPrint();
-	copyArticleCopyrightToPrint();
-}
+
+createPrintPostFooter();
+copyNewsletterTitleToPrint();
+copyArticleCopyrightToPrint();
