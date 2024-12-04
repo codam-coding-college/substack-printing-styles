@@ -21,9 +21,13 @@ function createPrintPostFooter() {
 	console.log('[Substack Printing Styles] Creating printable post footer');
 	const article = getArticle();
 	const postFooter = article.querySelector('.post-footer');
+	if (!postFooter) {
+		console.warn('[Substack Printing Styles] No post footer found, cannot create print footer!');
+		return;
+	}
 	const printPostFooter = document.createElement('div');
 	printPostFooter.classList.add('print-post-footer', 'substack-printing-only');
-	article.insertBefore(printPostFooter, postFooter.nextSibling);
+	postFooter.parentElement.insertBefore(printPostFooter, postFooter.nextSibling);
 	console.log('[Substack Printing Styles] Printable post footer created:', printPostFooter);
 }
 
