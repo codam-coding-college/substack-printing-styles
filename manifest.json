@@ -9,6 +9,13 @@
 	"permissions": [
 
 	],
+	"icons": {
+		"64": "icons/icon64.png",
+		"96": "icons/icon96.png",
+		"128": "icons/icon128.png",
+		"256": "icons/icon256.png",
+		"512": "icons/icon512.png"
+	},
 	"content_scripts": [
 		{
 			"matches": [
