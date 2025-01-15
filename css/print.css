@@ -39,6 +39,11 @@
 		border-bottom: 1px solid var(--color-detail-themed) !important;
 	}
 
+	/* Hide subscribe widget */
+	.subscribe-widget {
+		display: none !important;
+	}
+
 	/* Post footer: hide comments */
 	#discussion {
 		display: none !important;
