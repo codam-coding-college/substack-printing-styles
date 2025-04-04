@@ -26,12 +26,31 @@ function addPaywallNotice() {
 
 function copyNewsletterTitleToPrint() {
 	console.log('[Substack Printing Styles] Copying newsletter title to print');
-	const titleElem = document.querySelector('.topbar-content .navbar-title');
+	const mainMenu = document.querySelector('.main-menu');
+	if (!mainMenu) {
+		console.warn('[Substack Printing Styles] No main menu found, cannot copy newsletter title!');
+		return;
+	}
+	let titleElem = null;
+	// Check if the titleContainer is present
+	for (const child of mainMenu.firstElementChild.firstElementChild.children) {
+		for(const classname of child.classList) {
+			if (classname.startsWith('titleContainer')) {
+				console.log('[Substack Printing Styles] Title container found');
+				titleElem = child;
+			}
+		}
+	}
+	if (!titleElem) {
+		console.warn('[Substack Printing Styles] No title container found, cannot copy newsletter title!');
+		return;
+	}
 	console.log('[Substack Printing Styles] Title element:', titleElem);
 	const article = getArticle();
 	const postHeader = article.querySelector('.post-header');
 	// Copy the title to the print header by cloning the element
 	const titleClone = titleElem.cloneNode(true);
+	titleClone.classList.add('print-newsletter-title');
 	titleClone.classList.add('substack-printing-only');
 	postHeader.insertBefore(titleClone, postHeader.firstChild);
 	console.log('[Substack Printing Styles] Title cloned:', titleClone);

@@ -1,6 +1,6 @@
 /* Hide custom print elements */
 .substack-printing-only {
-	display: none !important;
+	/* display: none !important; */
 }
 
 @media print {
@@ -20,8 +20,11 @@
 	}
 
 	/* Newsletter title: increase size (normal size = around 24?) */
-	.post-header .navbar-title {
+	.post-header .print-newsletter-title h1 {
+		display: block !important;
 		font-size: var(--font-size-36) !important;
+		text-decoration: underline !important;
+		margin-bottom: 0.5em !important;
 	}
 
 	/* Newsletter post title: decrease size (normal size = 32) */
