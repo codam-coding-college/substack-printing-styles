@@ -3,7 +3,7 @@
 	"name": "Substack Printing Styles",
 	"author": "freek.bes@codam.nl",
 	"homepage_url": "https://github.com/codam-coding-college/substack-printing-styles",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Add printing styles for Substack articles, making them more readable on paper.",
 	"incognito": "spanning",
 	"permissions": [
