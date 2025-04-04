@@ -1,6 +1,6 @@
 /* Hide custom print elements */
 .substack-printing-only {
-	/* display: none !important; */
+	display: none !important;
 }
 
 @media print {
@@ -54,6 +54,11 @@
 
 	/* Post footer: hide likes & restack list */
 	.available-content + .visibility-check + div {
+		display: none !important;
+	}
+
+	/* Post footer: hide contributor list */
+	.post-contributor-footer {
 		display: none !important;
 	}
 
