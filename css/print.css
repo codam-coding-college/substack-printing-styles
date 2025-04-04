@@ -27,6 +27,11 @@
 		margin-bottom: 0.5em !important;
 	}
 
+	/* Make sure the newsletter fits on the page (at 100% the right side is cut off) */
+	.single-post {
+		max-width: 90% !important;
+	}
+
 	/* Newsletter post title: decrease size (normal size = 32) */
 	.post-title {
 		font-size: var(--font-size-30) !important;
